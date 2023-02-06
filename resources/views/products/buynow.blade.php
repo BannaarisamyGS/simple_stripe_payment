@@ -37,7 +37,7 @@
         <img src="{{ route('productImage',basename($product->product_url)) }}" height="200px" width="200px">
         <br>
         <span>{{ $product->product_name }}</span><br>
-        <span>${{ $product->price }}</span>
+        <span>INR : {{ $product->price }}</span>
     </div>
     <div class="offset-1 col-8">
         <form method="POST" action="{{ route('products.purchase', $product->id) }}" class="card-form mt-3 mb-3">

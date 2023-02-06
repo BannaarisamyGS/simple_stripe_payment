@@ -15,6 +15,7 @@
             <div class="col-3">
                 <img src="{{ route('productImage',basename($product->product_url)) }}" height="200px" width="200px"><br>
                 <span>{{ $product->product_name }}</span><br>
+                <span>INR : {{ $product->price }}</span><br>
                 <a class="btn btn-primary" href="/product-purchase-page/{{ $product->id }}"> Buy Now</a>
             </div>    
             @endforeach

@@ -77,7 +77,7 @@ class ProductController extends Controller
             else{
                 $user->updateDefaultPaymentMethod($paymentMethod);
             }
-            $user->charge($price, $paymentMethod,['off_session'=>true,"description"=>"Buying a product"]);        
+            $user->charge($price * 100, $paymentMethod,['off_session'=>true,"description"=>"Buying a product"]);        
         } catch (\Exception $exception) {
             return back()->with('error', $exception->getMessage());
         }
